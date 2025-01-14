@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/linear_regression.dir/linear_regression.cpp.o  -o linear_regression 

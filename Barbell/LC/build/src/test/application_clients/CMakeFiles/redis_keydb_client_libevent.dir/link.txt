@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/redis_keydb_client_libevent.dir/redis_keydb_client_libevent.cpp.o  -o redis_keydb_client_libevent  -levent 

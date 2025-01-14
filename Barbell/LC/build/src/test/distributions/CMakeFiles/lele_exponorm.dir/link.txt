@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/lele_exponorm.dir/lele_exponorm.cpp.o  -o lele_exponorm 

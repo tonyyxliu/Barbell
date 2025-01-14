@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/application_clients/nginx_client_libevent.cpp
+iostream
+-
+event2/event.h
+-
+event2/http.h
+-
+event2/keyvalq_struct.h
+-
+event2/buffer.h
+-
+event2/util.h
+-
+event2/bufferevent.h
+-
+cstring
+-
+string
+-
+chrono
+-
+event2/listener.h
+-
+csignal
+-
+

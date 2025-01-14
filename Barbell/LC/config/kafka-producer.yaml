@@ -1,0 +1,81 @@
+Server:
+  Type: kafka-producer     # Available types of server: [Redis (6379), Memcached (11211), MYSQL (3306), Nginx (8080), Kafka (9092)]
+  IP: 127.0.0.1
+  Port: 9092      # Useless for nginx with URL on Internet
+  Auth:
+    UserName: none
+    Password: none
+
+Client:
+  Mode: open              # Open or Closed (Open-Loop, Closed-Loop, or Stress Test)
+  Distributed: false          # Enable distributed clients or not. If not enable, only the master will be considered
+  ThreadsPerNode: 2         # number of threads to open for each client node (pthread is used in Barbell)
+  ConnectionsPerThread: 1   # One client can host several connections for I/O
+  MaxOutstandingRequests: -1
+
+LatencyMeasurement:
+  MaxRequestTimeout: -1   # Maximum timeout for an outstanding request (-1 for unlimited)
+
+StatisticsLogging: # Needs parsing in program
+  Enable: true
+  PrintInterval: 1  # in seconds
+  PercentileLatency: 50,75,90,99
+  ServerResourceUtilization:
+    SshAuth:
+      UserName: yuang
+      Password: fghjkl;'
+    DataToCollect: cpu
+
+LoadCustomization:
+  RequestInterval:
+    Type: poisson     # Distribution type of request interval (can be 'fixed' or 'poisson')
+  Duration: # Total duration = warmup + formal + cooldown
+    Warmup: 5     # Warmup stage sends requests to server, receiving them but not record the latencies
+    Formal: 10     # Formal stage is the real load generation and recording stage
+    Cooldown: 5   # Cooldown stage collects unreceived requests in formal stage
+  Pattern:
+    Type: synthetic
+    Reproduce:
+      QpsCsvFilePath: /home/lemaker/open-source/Lab/load_generator/Barbell/LC/examples/vary_cpu_utilization/target_cpu_qps.csv
+    #      QpsCsvFilePath: /home/lemaker/open-source/Lab/load_generator/Barbell/LC/examples/vary_cpu_utilization/vary_cpu_QPS.csv
+    Periodical: # The periodical pattern is the default setting. Set 'periods_to_run' as 1 if the trace is not periodical.
+      PeriodsToRun: 1   # (float) Number of periods to run during formal stage
+      StagesEachPeriod: # A list of load stages. The stages are executed in order.
+        - Name: day      # Name of the load stage
+          QPS:
+            Model: normal # Available distributions: [fixed, uniform, normal, gamma, poisson, exponential, chi-square, gennorm, alpha, exponnorm ]
+            Mean: 500000
+            Stddev: 0
+          Duration: 1.00   # Percentage of this stage in floating format
+#        - Name: night
+#          QPS:
+#            Model: fixed
+#            Mean: 20
+#            Stddev: 0
+#          Duration: 0.20
+#        - Name: burst
+#          QPS:
+#            Model: fixed
+#            Mean: 20
+#            Stddev: 0
+#          Duration: 0.20
+
+RequestContentCustomization:
+  KeyValue: # Appplicable for Redis/Memcached/KeyDB
+    GetRatio: 0.9      # Possibility of GET requests among all the requests
+    KeyPrefix: "Barbell_key_"
+    KeyRange: 10000    # The number of different keys
+    KeySize: 300         # Size of each key
+    ValueSize: 2000      # Size of each value
+  Mysql:
+    Schema: sbtest
+  Nginx:
+    TargetURL: "http://localhost:80"
+  Kafka:
+    # TODO: some necessary configuration of Kafka load generation
+    Topic: barbell-8
+    Group: test-consumer-group
+    Partition: 4
+    MessageKeySize: 100
+    MessageSize: 1000
+    TransmitCount: 10000

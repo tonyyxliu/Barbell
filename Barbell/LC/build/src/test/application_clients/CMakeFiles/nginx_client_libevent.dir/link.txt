@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/nginx_client_libevent.dir/nginx_client_libevent.cpp.o  -o nginx_client_libevent  -levent 

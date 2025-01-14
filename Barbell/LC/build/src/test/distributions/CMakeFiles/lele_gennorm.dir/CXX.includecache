@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/distributions/lele_gennorm.cpp
+cstdio
+-
+cstring
+-
+cmath
+-
+iostream
+-
+fstream
+-
+fstream
+-
+random
+-
+

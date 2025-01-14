@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/kafka_producer_librdkafka.dir/kafka_producer_librdkafka.cpp.o  -o kafka_producer_librdkafka  -lglog -lrdkafka 

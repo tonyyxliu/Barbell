@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/application_clients/kafka_consumer_librdkafka.cpp
+iostream
+-
+cstdio
+-
+csignal
+-
+cstring
+-
+cctype
+-
+string
+-
+unistd.h
+-
+sys/time.h
+-
+librdkafka/rdkafka.h
+/home/Barbell/LC/src/test/application_clients/librdkafka/rdkafka.h
+

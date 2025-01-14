@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/lele_alpha.dir/lele_alpha.cpp.o  -o lele_alpha 

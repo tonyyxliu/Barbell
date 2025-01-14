@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/mysql_client_sync.dir/mysql_client_sync.cpp.o  -o mysql_client_sync  -lmysqlcppconn 

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/distributions/lele_exponorm.cpp
+cstdio
+-
+cstring
+-
+cmath
+-
+iostream
+-
+fstream
+-
+fstream
+-
+random
+-
+map
+-
+iomanip
+-
+

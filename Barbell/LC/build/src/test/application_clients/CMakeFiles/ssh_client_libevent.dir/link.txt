@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/ssh_client_libevent.dir/ssh_client_libevent.cpp.o  -o ssh_client_libevent  -levent -lssh 

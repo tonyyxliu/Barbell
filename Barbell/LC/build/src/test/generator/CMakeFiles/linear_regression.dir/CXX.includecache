@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/generator/linear_regression.cpp
+iostream
+-
+cstdio
+-
+vector
+-
+string
+-
+fstream
+-
+sstream
+-
+cmath
+-
+

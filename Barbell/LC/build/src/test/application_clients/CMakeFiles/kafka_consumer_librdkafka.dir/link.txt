@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/kafka_consumer_librdkafka.dir/kafka_consumer_librdkafka.cpp.o  -o kafka_consumer_librdkafka  -lglog -lrdkafka 

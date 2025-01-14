@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/application_clients/memcached_client_libevent.cpp
+sys/socket.h
+-
+arpa/inet.h
+-
+iostream
+-
+netinet/in.h
+-
+event2/event.h
+-
+event2/buffer.h
+-
+event2/bufferevent.h
+-
+cassert
+-
+cstring
+-
+cstdio
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/csdn_norm_implement.dir/csdn_norm_implement.cpp.o  -o csdn_norm_implement 

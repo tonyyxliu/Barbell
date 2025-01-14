@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/memcached_client_libevent.dir/memcached_client_libevent.cpp.o  -o memcached_client_libevent  -levent 

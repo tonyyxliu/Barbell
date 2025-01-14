@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Barbell/LC/src/test/application_clients/redis_keydb_client_libevent.cpp
+arpa/inet.h
+-
+sys/socket.h
+-
+iostream
+-
+netinet/in.h
+-
+event2/buffer.h
+-
+event2/bufferevent.h
+-
+event2/event.h
+-
+cassert
+-
+cstdio
+-
+cstring
+-
+
